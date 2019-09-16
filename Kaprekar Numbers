@@ -1,0 +1,41 @@
+#include "pch.h"
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int l, u, temp;
+	scanf_s("%d", &l);
+	scanf_s("%d", &u);
+    for(int i=l;l<=u;l++)
+	{  int a1, a2, sqr,d=0,b;
+		temp = l;
+		while (temp != 0) {
+			temp = temp / 10;
+			d++;
+		}
+        sqr = l * l;
+		b = pow(10, d);
+		a2 = sqr % b;
+		a1 = sqr / b;
+		//printf("%d           %d         %d        %d \n", l ,d, a1, a2);
+	
+		if ((a1 + a2) == l)
+		{
+			printf("%d ", l);
+		}
+		
+	    
+		
+	}
+	
+	
+
+	return 0;
+}
+//Use .pch only if you are using vs17
+Example1:
+Input in Range of 1 and 100
+1
+100
+Output
+1 9 45 55 99
